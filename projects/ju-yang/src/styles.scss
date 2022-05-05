@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+TC&display=swap');
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family:'Montserrat', sans-serif,'Noto Sans TC', sans-serif, "Microsoft YaHei","Verdana";
+  font-size: 15px;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  color: #272727;
+}
+a,button{
+  cursor: pointer;text-decoration: none; color: #272727;
+  transition: all 0.3s;
+  &:hover{
+    -webkit-filter:brightness(1.1);
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+.mid1000{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.mid1200{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+//bigbanner slider carousel
+.bigbannerAll .owl-carousel{
+  position: relative;
+  .owl-nav{
+    width: 100%;
+    position: absolute;
+    top:45%;
+  }
+
+  &.owl-theme .owl-nav [class*=owl-]{
+    padding: 0;
+    margin: 0;
+    border-radius: 55px;
+    font-size: 35px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(177, 177, 177, 0);
+    transition: all 0.3s ease-in-out;
+    .m-icons{
+      top: 0;
+    }
+    &:hover{
+      background: rgba(170, 178, 179, 0.5);
+    }
+
+  }
+  .owl-prev{
+    position: absolute;left: 0;}
+  .owl-next{
+    position: absolute;right: 0;}
+}

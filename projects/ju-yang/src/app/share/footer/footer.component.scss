@@ -1,0 +1,102 @@
+footer{
+  padding-bottom:  35px;
+
+  .f-banner{
+    background: url("../../../assets/images/footerTop-bg.jpg") no-repeat top center ;
+    background-size: cover;
+    height: 220px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    .mid1200{
+
+      .fb-txt{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        padding: 15px;
+        p{
+          font-size: 15px;
+          line-height: 23px;
+        }
+        button{
+          border: 0;
+          background-color: #00a846;
+          color: #ffffff;
+          padding: 8px 13px;
+          margin:0 0 0 8px ;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            margin:8px 0 ;
+          }
+        }
+
+      }
+
+    }
+  }
+  .f-Top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 35px;
+    .f-Left{
+      img.logo{
+        width: 200px;
+        height: auto;
+      }
+      p{
+        padding: 3px 0 3px 7px;
+        font-size: 12px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .f-Right{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items:flex-end;
+      @media screen and (max-width: 768px) {
+        margin-top: 15px;
+        width: 100%;
+      }
+      .fR-btn{
+        width: 50%;
+        text-align: right;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          border: 1px solid #e4e4e4;
+        }
+        a{
+          white-space: nowrap;
+          font-size: 12px;
+          padding:8px;
+          i{margin:3px 3px 0 0;}
+          &:hover{
+            color: #00712f;
+            opacity: 0.8;
+          }
+          &.active{
+            color: #00712f;
+          }
+        }
+      }
+
+    }
+  }
+
+  .f-Down{
+    color: #4e4e4e;
+    padding: 15px 7px 0 7px;
+    width: 100%;
+    font-size: 12px;
+    @media screen and (max-width: 768px) {
+     text-align: center;
+    }
+  }
+}
+

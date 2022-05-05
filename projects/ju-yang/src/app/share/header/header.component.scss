@@ -1,0 +1,31 @@
+header{
+  height: 55px;
+  background-color: #fff;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  .logo{
+    height: 100%;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+  nav{
+    a{
+      font-size: 13px;
+      padding: 7px 9px;
+      transition: all 0.35s;
+      color: #000;
+      &:hover{
+        color: #00712f;
+        opacity: 0.8;
+      }
+      &.active{
+        color: #00712f;
+      }
+    }
+  }
+}
+
