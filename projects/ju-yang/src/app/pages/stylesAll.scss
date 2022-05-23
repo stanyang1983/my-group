@@ -1,0 +1,117 @@
+.mainbox1{
+  padding: 55px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  h1{
+    font-size: 23px;
+    margin-bottom: 23px;
+  }
+  .containPlx{
+    margin-bottom: 17px;
+    p{
+      font-size: 15px;
+      color: #525252;
+      margin-bottom: 5px;
+    }
+    .proBtn{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 25px;
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .proBox{
+        width: 280px;
+        @media screen and (max-width: 768px) {
+          width: 230px;
+        }
+        button{
+          padding: 0;
+          margin: 5px;
+          //width: 80%;
+          overflow: hidden;
+          border-radius: 8px;
+          img{
+            transition: all 0.3s;
+            overflow: hidden;
+          }
+          &:hover img{
+            transform: scale(1.02, 1.02);
+            filter: brightness(105%);
+            -webkit-filter: brightness(105%)
+          }
+          p{color: #ffffff;padding: 4px 0;}
+        }
+      }
+
+    }
+  }
+
+  button{
+    border: 0;
+    background-color: #00a846;
+    color: #ffffff;
+    padding: 8px 13px;
+  }
+  .mbLeft60{
+    width: 60%;
+    padding-right: 19px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      order: 2;
+      padding-right: 0;
+      h1{margin-top: 23px;}
+    }
+  }
+  .mbRight40{
+    width: 40%;
+    img{
+      overflow: hidden;
+      //border-radius: 8px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      order: 1;
+    }
+  }
+  .mbLeft50{
+    width: 50%;
+    padding-right: 19px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      //order: 2;
+      padding-right: 0;
+      h1{margin-top: 23px;}
+    }
+  }
+  .mbRight50{
+    width: 50%;
+    img{
+      overflow: hidden;
+      //border-radius: 8px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      //order: 1;
+    }
+  }
+
+  .mbFull{
+    width: 100%;
+    h1{
+       text-align: center;
+    }
+  }
+}
+
+.proBg{
+  padding: 90px 0;
+  background: url('../../assets/images/indexProBg.jpg') center center no-repeat ;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+}

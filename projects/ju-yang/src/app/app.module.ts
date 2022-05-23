@@ -14,6 +14,13 @@ import { BigBannerComponent } from './share/big-banner/big-banner.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutComponent } from './pages/main/about/about.component';
+import { ProductsComponent } from './pages/main/products/products.component';
+import { QualityComponent } from './pages/main/quality/quality.component';
+import { CooperationComponent } from './pages/main/cooperation/cooperation.component';
+import { ContactComponent } from './pages/main/contact/contact.component';
+import { LayoutModule } from '@angular/cdk/layout';
+
 
 @NgModule({
   declarations: [
@@ -23,13 +30,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     MainComponent,
     NotFoundComponent,
-    BigBannerComponent
+    BigBannerComponent,
+    AboutComponent,
+    ProductsComponent,
+    QualityComponent,
+    CooperationComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}

@@ -1,10 +1,33 @@
 header{
+  -webkit-box-shadow: 0px -3px 10px -3px rgba(39, 39, 39, 0.75);
+  -moz-box-shadow: 0px -3px 10px -3px rgba(39,39,39,0.75);
+  box-shadow: 0px -3px 10px -3px rgba(39,39,39,0.75);
   height: 55px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: #fff;
+  z-index: 999;
   padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
+  a.ham{
+    visibility: hidden;
+    position: absolute;
+    left:15px;
+    color: #00712f;
+    i{
+      font-size: 23px;
+    }
+    @media screen and (max-width: 768px) {
+      visibility:visible;
+     }
+  }
   .logo{
     height: 100%;
     img{
@@ -12,9 +35,44 @@ header{
       width: auto;
     }
   }
+
   nav{
+    position: relative;
+    width: auto;
+    @media screen and (max-width: 768px) {
+     position: fixed;
+     z-index: 996;
+     top: 55px;
+     left: 0;
+     width: 100%;
+     height: calc(100vh - 55px) ;
+     background-color: rgba(241, 241, 241, 0.9);
+     padding: 25px;
+     display: flex;
+     flex-direction: column;
+     //justify-content: flex-end;
+    }
+    a.closeBtn{
+      display: none;
+      border-radius: 0;
+      border: 0;
+      position: fixed;
+      bottom:-8px;
+      height: 85px;
+      left: 0;
+      color: #fff;
+      background-color: rgb(0, 0, 0,0.6);
+      &:hover{
+        color: red;
+        border: 0;
+        opacity: 0.8;
+      }
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
     a{
-      font-size: 13px;
+      font-size: 15px;
       padding: 7px 9px;
       transition: all 0.35s;
       color: #000;
@@ -25,7 +83,33 @@ header{
       &.active{
         color: #00712f;
       }
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 19px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        &:hover{
+          border: 1px solid #00712f;
+        }
+        &.active{
+          border: 1px solid #00712f;
+          background-color: #00712f;
+          color: #ffffff;
+        }
+       }
     }
   }
+  @media screen and (min-width: 768px) {
+
+  }
+  @media screen and (max-width: 768px) {
+
+  }
+
+
 }
 

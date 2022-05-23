@@ -1,13 +1,19 @@
 <header>
-  <a routerLink="index" class="logo">
+  <a class="ham" (click)="openNav()">
+    <i class="fas fa-bars" *ngIf="!navOpen"></i>
+    <i class="fas fa-times" *ngIf="navOpen"></i>
+  </a>
+  <a routerLink="index" class="logo" (click)="mobileCloseNav()">
     <img src="assets/images/juyang-logo.png" alt="">
   </a>
 
-  <nav>
-    <a routerLink="about" routerLinkActive="active">關於炬洋</a>
-    <a routerLink="products" routerLinkActive="active">產品資訊</a>
-    <a routerLink="quality" routerLinkActive="active">品質規範</a>
-    <a routerLink="cooperation" routerLinkActive="active">合作案例</a>
-    <a routerLink="contact" routerLinkActive="active">聯絡我們</a>
+  <nav [@navOpen]="navOpen ? 'open' : 'closed'">
+    <a routerLink="index" routerLinkActive="active" (click)="mobileCloseNav()">首頁</a>
+    <a routerLink="about" routerLinkActive="active" (click)="mobileCloseNav()">關於炬洋</a>
+    <a routerLink="products" routerLinkActive="active" (click)="mobileCloseNav()">產品資訊</a>
+    <a routerLink="quality" routerLinkActive="active" (click)="mobileCloseNav()">品質規範</a>
+    <a routerLink="cooperation" routerLinkActive="active" (click)="mobileCloseNav()">合作案例</a>
+    <a routerLink="contact" routerLinkActive="active" (click)="mobileCloseNav()">聯絡我們</a>
+    <a class="closeBtn" (click)="mobileCloseNav()"><i class="fas fa-times"></i> 關閉</a>
   </nav>
 </header>
