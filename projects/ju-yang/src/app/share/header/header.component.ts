@@ -53,6 +53,10 @@ export class HeaderComponent implements OnInit {
   openNav(){
     this.navOpen = !this.navOpen;
   }
+  child =false;
+  toggleChild(){
+    this.child = !this.child;
+  }
 
 
   mobileCloseNav(){
