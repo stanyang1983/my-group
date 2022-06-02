@@ -148,6 +148,31 @@ p{
       background-size: cover;
     }
   }
+  &.banner3{
+    background: url('../../assets/images/banner-quality.jpg') center center no-repeat ;
+    background-size: cover;
+    @media screen and (min-width: 1500px) {
+      background: url('../../assets/images/banner-quality.jpg') bottom center no-repeat ;
+      background-size: cover;
+    }
+  }
+  &.banner4{
+    background: url('../../assets/images/banner-Cooperation.jpg') top center no-repeat ;
+    background-size: cover;
+    @media screen and (min-width: 1500px) {
+      background: url('../../assets/images/banner-Cooperation.jpg') center center no-repeat ;
+      background-size: cover;
+    }
+  }
+  &.banner5{
+    background: url('../../assets/images/banner-Contact.jpg') center center no-repeat ;
+    background-size: cover;
+    @media screen and (min-width: 1500px) {
+      background: url('../../assets/images/banner-Contact.jpg') bottom center no-repeat ;
+      background-size: cover;
+    }
+  }
+
 
 }
 
