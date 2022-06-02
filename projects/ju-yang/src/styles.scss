@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+TC&display=swap');
+@import '~lightgallery/scss/lightgallery';
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -76,5 +77,14 @@ img{
   .owl-next{
     position: absolute;right: 0;}
 }
+.lg-backdrop{
+  background-color: rgba(0,0,0,0.8);
+}
 
+.lg-img-wrap{
+  img{
+    border-radius: 8px;
+  }
+
+}
 

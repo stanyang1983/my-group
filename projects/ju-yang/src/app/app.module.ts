@@ -25,6 +25,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ProductsProcessComponent } from './pages/main/products-process/products-process.component';
 import { ProductsIntroComponent } from './pages/main/products-intro/products-intro.component';
 
+import { LightgalleryModule } from 'lightgallery/angular';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { ProductsIntroComponent } from './pages/main/products-intro/products-int
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    LightgalleryModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}

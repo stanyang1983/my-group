@@ -38,6 +38,13 @@ MIT
 @angular/router
 MIT
 
+lightgallery
+GPLv3
+
+lightgallery/angular
+
+lightgallery/plugins/zoom
+
 ngx-owl-carousel-o
 MIT
 
