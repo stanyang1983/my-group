@@ -18,7 +18,13 @@
         <a class="childBtn" routerLink="products/intro" routerLinkActive="active" (click)="mobileCloseNav()">產品介紹</a>
       </div>
     </a>
-    <a routerLink="quality" routerLinkActive="active" (click)="mobileCloseNav()">品質規範</a>
+    <a class="products"  (click)="toggleChild2()" (clickOutside)="child2 = false">
+      品質規範 <i class="fas fa-angle-up" *ngIf="child2"></i> <i class="fas fa-angle-down" *ngIf="!child2"></i>
+      <div class="proChild" *ngIf="child2">
+        <a class="childBtn" routerLink="quality/certificate" routerLinkActive="active" (click)="mobileCloseNav()">證書</a>
+        <a class="childBtn" routerLink="quality/equipment" routerLinkActive="active" (click)="mobileCloseNav()">實驗室設備</a>
+      </div>
+    </a>
     <a routerLink="cooperation" routerLinkActive="active" (click)="mobileCloseNav()">合作案例</a>
     <a routerLink="contact" routerLinkActive="active" (click)="mobileCloseNav()">聯絡我們</a>
     <a class="closeBtn" (click)="mobileCloseNav()"><i class="fas fa-times"></i> 關閉</a>

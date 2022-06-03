@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +19,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './pages/main/about/about.component';
 import { ProductsComponent } from './pages/main/products/products.component';
-import { QualityComponent } from './pages/main/quality/quality.component';
 import { CooperationComponent } from './pages/main/cooperation/cooperation.component';
 import { ContactComponent } from './pages/main/contact/contact.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -26,6 +26,8 @@ import { ProductsProcessComponent } from './pages/main/products-process/products
 import { ProductsIntroComponent } from './pages/main/products-intro/products-intro.component';
 
 import { LightgalleryModule } from 'lightgallery/angular';
+import { CertificateComponent } from './pages/main/certificate/certificate.component';
+import { EquipmentComponent } from './pages/main/equipment/equipment.component';
 
 
 @NgModule({
@@ -40,11 +42,12 @@ import { LightgalleryModule } from 'lightgallery/angular';
     BigBannerComponent,
     AboutComponent,
     ProductsComponent,
-    QualityComponent,
     CooperationComponent,
     ContactComponent,
     ProductsProcessComponent,
-    ProductsIntroComponent
+    ProductsIntroComponent,
+    CertificateComponent,
+    EquipmentComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,9 @@ import { LightgalleryModule } from 'lightgallery/angular';
     CarouselModule,
     BrowserAnimationsModule,
     LayoutModule,
-    LightgalleryModule
+    LightgalleryModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}

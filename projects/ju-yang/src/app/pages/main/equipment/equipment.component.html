@@ -1,0 +1,35 @@
+<div class="unitBanner banner3"></div>
+<div class="tabBox mid800">
+    <h5>
+      <a routerLink=""><i class="fas fa-home"></i>首頁</a>
+      <i class="fas fa-angle-right"></i>
+      品質規範
+      <i class="fas fa-angle-right"></i>
+      實驗室設備
+    </h5>
+  </div>
+  <div class="mid800 proTabsBtn">
+    <a class="childBtn" routerLink="/quality/certificate" routerLinkActive="active">證書</a>
+    <a class="childBtn" routerLink="/quality/equipment" routerLinkActive="active">實驗室設備</a>
+</div>
+<div class="mainbox1 mid800">
+    <div class="txtBox">
+      <h1>實驗室設備</h1>
+    </div>
+
+    <div class="containPlx">
+      <div>
+        <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="equipmentMain">
+          <a class="pic" href="assets/images/quality/equipment/equipment1.jpg"><img src="assets/images/quality/equipment/equipment1.jpg" alt="光澤儀"><p>光澤儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment2.jpg"><img src="assets/images/quality/equipment/equipment2.jpg" alt="百格附著測驗器"><p>百格附著測驗器</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment3.jpg"><img src="assets/images/quality/equipment/equipment3.jpg" alt="色差儀"><p>色差儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment4.jpg"><img src="assets/images/quality/equipment/equipment4.jpg" alt="風速儀"><p>風速儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment5.jpg"><img src="assets/images/quality/equipment/equipment5.jpg" alt="鉛筆硬度測試儀"><p>鉛筆硬度測試儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment6.jpg"><img src="assets/images/quality/equipment/equipment6.jpg" alt="電導率測定儀"><p>電導率測定儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment7.jpg"><img src="assets/images/quality/equipment/equipment7.jpg" alt="膜厚儀"><p>膜厚儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment8.jpg"><img src="assets/images/quality/equipment/equipment8.jpg" alt="非接觸式膜厚量測儀"><p>非接觸式膜厚量測儀</p></a>
+          <a class="pic" href="assets/images/quality/equipment/equipment9.jpg"><img src="assets/images/quality/equipment/equipment9.jpg" alt="杜邦式衝擊器"><p>杜邦式衝擊器</p></a>
+        </lightgallery>
+      </div>
+    </div>
+</div>

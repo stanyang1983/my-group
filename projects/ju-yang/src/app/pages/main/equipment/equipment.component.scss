@@ -1,0 +1,24 @@
+.equipmentMain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    a.pic{
+      width: 33.333%;
+      padding: 8px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      img{
+        box-shadow: -2px 1px 14px -6px #242424;
+        -webkit-box-shadow: -2px 1px 14px -6px #242424;
+        -moz-box-shadow: -2px 1px 14px -6px #242424;
+        -o-box-shadow: -2px 1px 14px -6px #242424;
+      }
+      p{
+        text-align: center;
+        position: relative;
+        //top: -15px;
+      }
+    }
+  
+  }

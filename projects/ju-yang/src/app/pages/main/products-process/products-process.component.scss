@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   position: sticky;
-  top: 96px;
+  top: 98px;
   z-index: 96;
   margin-bottom: 25px;
   h2{
@@ -16,12 +16,12 @@
     color: #00712f;
     background-color: #ffffff;
     width: 100%;
-    &:first-child{
-      border-radius: 50px 0 0 50px;
-    }
-    &:last-child{
-      border-radius: 0 50px 50px 0;
-    }
+    // &:first-child{
+    //   border-radius: 50px 0 0 50px;
+    // }
+    // &:last-child{
+    //   border-radius: 0 50px 50px 0;
+    // }
 
   }
   .h2active{

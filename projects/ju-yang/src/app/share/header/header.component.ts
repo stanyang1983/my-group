@@ -54,8 +54,12 @@ export class HeaderComponent implements OnInit {
     this.navOpen = !this.navOpen;
   }
   child =false;
+  child2 =false;
   toggleChild(){
     this.child = !this.child;
+  }
+  toggleChild2(){
+    this.child2 = !this.child2;
   }
 
 
