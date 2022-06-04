@@ -126,11 +126,11 @@ p{
 
 
 .unitBanner{
-  height: 270px;
+  height: 370px;
   display: flex;
   align-items: flex-end;
   @media screen and (max-width: 768px) {
-    height: 190px;
+    height: 150px;
   }
   &.banner1{
     background: url('../../assets/images/banner-About.jpg') top center no-repeat ;
