@@ -10,6 +10,7 @@
 </div>
 <div class="mid800 proTabsBtn">
   <a class="childBtn" routerLink="/products/about" routerLinkActive="active">粉體塗裝</a>
+  <a class="childBtn" routerLink="/products/coating" routerLinkActive="active">塗料介紹</a>
   <a class="childBtn" routerLink="/products/process" routerLinkActive="active">生產流程</a>
   <a class="childBtn" routerLink="/products/intro" routerLinkActive="active">產品介紹</a>
 </div>
@@ -27,13 +28,13 @@
   </div>
 
   <div class="containPlx" *ngIf="intro1">
-    <h2>一般室外型塗料</h2>
+    <h2 class="center" style="margin-bottom: 20px;">一般室外型塗料</h2>
 
     <div>
       <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="introMain">
         <!-- <a href="img/img1.jpg"><img alt="img1" src="img/thumb1.jpg" /></a>
         <a href="img/img1.jpg"><img alt="img2" src="img/thumb1.jpg" /></a> -->
-     
+
         <a class="pic" href="assets/images/products/intro/class1/AB001T.jpg"><img  src="assets/images/products/intro/class1/AB001T.jpg" alt="AB001T"><p>AB001T</p> </a>
         <a class="pic" href="assets/images/products/intro/class1/AD001T.jpg"><img  src="assets/images/products/intro/class1/AD001T.jpg" alt="AD001T"><p>AD001T</p> </a>
         <a class="pic" href="assets/images/products/intro/class1/BB001T.jpg"><img  src="assets/images/products/intro/class1/BB001T.jpg" alt="BB001T"><p>BB001T</p> </a>
@@ -62,7 +63,7 @@
     </div>
   </div>
   <div class="containPlx" *ngIf="intro2">
-    <h2>高耐候Interpon D</h2>
+    <h2 class="center" style="margin-bottom: 20px;">高耐候Interpon D</h2>
     <div>
       <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="introMain">
         <a class="pic" href="assets/images/products/intro/class4/AJ002T.jpg"><img src="assets/images/products/intro/class4/AJ002T.jpg" alt="AJ002T"><p>AJ002T</p></a>
@@ -75,7 +76,7 @@
     </div>
   </div>
   <div class="containPlx"  *ngIf="intro3">
-    <h2>粉體氟碳</h2>
+    <h2 class="center" style="margin-bottom: 20px;">粉體氟碳</h2>
     <div>
       <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="introMain">
         <a class="pic" href="assets/images/products/intro/class3/AF004T.jpg"><img src="assets/images/products/intro/class3/AF004T.jpg" alt="AF004T"><p>AF004T</p></a>
@@ -88,7 +89,7 @@
     </div>
   </div>
   <div class="containPlx" *ngIf="intro4">
-    <h2>木紋</h2>
+    <h2 class="center" style="margin-bottom: 20px;">木紋</h2>
     <div >
       <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="introMain">
         <a class="pic" href="assets/images/products/intro/class2/RQ0010.jpg"><img src="assets/images/products/intro/class2/RQ0010.jpg" alt="RQ0010"><p>RQ0010</p></a>
@@ -96,7 +97,7 @@
         <a class="pic" href="assets/images/products/intro/class2/RR0013.jpg"><img src="assets/images/products/intro/class2/RR0013.jpg" alt="RR0013"><p>RR0013</p></a>
         <a class="pic" href="assets/images/products/intro/class2/RR0015.jpg"><img src="assets/images/products/intro/class2/RR0015.jpg" alt="RR0015"><p>RR0015</p></a>
         <a class="pic" href="assets/images/products/intro/class2/RS0012.jpg"><img src="assets/images/products/intro/class2/RS0012.jpg" alt="RS0012"><p>RS0012</p></a>
-      
+
       </lightgallery>
     </div>
   </div>

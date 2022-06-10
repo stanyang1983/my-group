@@ -1,3 +1,49 @@
+.swtH4Btn{
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 98px;
+  z-index: 96;
+  margin-bottom: 25px;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+   }
+  h2{
+    display: flex;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding:5px 19px;
+    border: #00712f 1px solid;
+    color: #00712f;
+    background-color: #ffffff;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+      width: 50%;
+      font-size: 15px;
+      padding:5px;
+     }
+    &:first-child{
+      //border-radius: 50px 0 0 50px;
+      @media screen and (max-width: 768px) {
+        border-radius: 0;
+       }
+    }
+    &:last-child{
+      //border-radius: 0 50px 50px 0;
+      @media screen and (max-width: 768px) {
+        border-radius: 0;
+       }
+    }
+
+  }
+  .h2active{
+    background-color: #00712f;
+    color: #ffffff;
+  }
+}
+
 .certificateMain{
     display: flex;
     flex-wrap: wrap;
@@ -20,5 +66,5 @@
         //top: -15px;
       }
     }
-  
+
   }

@@ -11,6 +11,7 @@ import { ContactComponent } from './pages/main/contact/contact.component';
 import { CertificateComponent } from './pages/main/certificate/certificate.component';
 import { EquipmentComponent } from './pages/main/equipment/equipment.component';
 import { NotFoundComponent } from './pages/main/not-found/not-found.component';
+import { ProductsCoatingComponent } from './pages/main/products-coating/products-coating.component';
 const routes: Routes = [
   // { path: "login", component: LoginComponent, canActivate : [IsloginedGuardService] },
 
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: "", redirectTo: 'index', pathMatch: 'full' },
     { path: "index", component: IndexComponent },
     { path: "products/about", component: ProductsComponent },
+    { path: "products/coating", component: ProductsCoatingComponent },
     { path: "products/process", component: ProductsProcessComponent },
     { path: "products/intro", component: ProductsIntroComponent },
     { path: "cooperation", component: CooperationComponent },

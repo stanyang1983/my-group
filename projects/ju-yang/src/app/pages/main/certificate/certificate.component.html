@@ -17,18 +17,48 @@
       <h1>證書</h1>
     </div>
 
+    <div class="swtH4Btn">
+      <h2 (click)="intro1Change()" [ngClass]="{'h2active': intro1 == true}">品質管理系統</h2>
+      <h2 (click)="intro2Change()" [ngClass]="{'h2active': intro2 == true}">Interpon D</h2>
+      <h2 (click)="intro3Change()" [ngClass]="{'h2active': intro3 == true}">國邦化學</h2>
+      <h2 (click)="intro4Change()" [ngClass]="{'h2active': intro4 == true}">南寶樹脂</h2>
+    </div>
 
-    <div class="containPlx">
+    <div class="containPlx"  *ngIf="intro1">
+      <h2 class="center" style="margin-bottom: 20px;">品質管理系統</h2>
         <div>
           <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="certificateMain">
             <a class="pic" href="assets/images/quality/certificate/certificate1.jpg"><img src="assets/images/quality/certificate/certificate1.jpg" alt="品質管理系統 ISO 9001：2015"><p>品質管理系統 ISO 9001：2015</p></a>
-            <a class="pic" href="assets/images/quality/certificate/certificate4.jpg"><img src="assets/images/quality/certificate/certificate4.jpg" alt="Interpon D 系列 3003認證書"><p>Interpon D 系列 3003認證書</p></a>
-            <a class="pic" href="assets/images/quality/certificate/certificate3.jpg"><img src="assets/images/quality/certificate/certificate3.jpg" alt="Interpon D 合格塗裝廠授權證書"><p>Interpon D 合格塗裝廠授權證書</p></a>  
-            <a class="pic" href="assets/images/quality/certificate/certificate2.jpg"><img src="assets/images/quality/certificate/certificate2.jpg" alt="國邦塗裝授權證書"><p>國邦塗裝授權證書</p></a>
-            <a class="pic" href="assets/images/quality/certificate/certificate5.jpg"><img src="assets/images/quality/certificate/certificate5.jpg" alt="國邦化學AAMA 2604-13 塗裝授權"><p>國邦化學AAMA 2604-13 塗裝授權</p></a>
-            <a class="pic" href="assets/images/quality/certificate/certificate6.jpg"><img src="assets/images/quality/certificate/certificate6.jpg" alt="國邦化學AAMA 2605-13 塗裝授權"><p>國邦化學AAMA 2605-13 塗裝授權</p></a>
           </lightgallery>
         </div>
-      </div>
+    </div>
+    <div class="containPlx"  *ngIf="intro2">
+      <h2 class="center" style="margin-bottom: 20px;">Interpon D</h2>
+        <div>
+          <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="certificateMain">
+            <a class="pic" href="assets/images/quality/certificate/certificate4.jpg"><img src="assets/images/quality/certificate/certificate4.jpg" alt="Interpon D 系列 3003認證書"><p>Interpon D 系列 3003認證書</p></a>
+            <a class="pic" href="assets/images/quality/certificate/certificate3.jpg"><img src="assets/images/quality/certificate/certificate3.jpg" alt="Interpon D 合格塗裝廠授權證書"><p>Interpon D 合格塗裝廠授權證書</p></a>
+          </lightgallery>
+        </div>
+    </div>
+    <div class="containPlx"  *ngIf="intro3">
+      <h2 class="center" style="margin-bottom: 20px;">國邦化學</h2>
+        <div>
+          <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="certificateMain">
+
+            <a class="pic" href="assets/images/quality/certificate/certificate5.jpg"><img src="assets/images/quality/certificate/certificate5.jpg" alt="國邦化學AAMA 2604-13 塗裝授權"><p>國邦化學AAMA 2604-13 塗裝授權</p></a>
+            <a class="pic" href="assets/images/quality/certificate/certificate6.jpg"><img src="assets/images/quality/certificate/certificate6.jpg" alt="國邦化學AAMA 2605-13 塗裝授權"><p>國邦化學AAMA 2605-13 塗裝授權</p></a>
+            <a class="pic" href="assets/images/quality/certificate/certificate2.jpg"><img src="assets/images/quality/certificate/certificate2.jpg" alt="國邦塗裝授權證書"><p>國邦塗裝授權證書</p></a>
+          </lightgallery>
+        </div>
+    </div>
+    <div class="containPlx"  *ngIf="intro4">
+      <h2 class="center" style="margin-bottom: 20px;">南寶樹脂</h2>
+        <div>
+          <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide"  class="certificateMain">
+
+          </lightgallery>
+        </div>
+    </div>
 </div>
 

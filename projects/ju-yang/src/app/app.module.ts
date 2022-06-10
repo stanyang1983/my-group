@@ -28,6 +28,7 @@ import { ProductsIntroComponent } from './pages/main/products-intro/products-int
 import { LightgalleryModule } from 'lightgallery/angular';
 import { CertificateComponent } from './pages/main/certificate/certificate.component';
 import { EquipmentComponent } from './pages/main/equipment/equipment.component';
+import { ProductsCoatingComponent } from './pages/main/products-coating/products-coating.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { EquipmentComponent } from './pages/main/equipment/equipment.component';
     ProductsProcessComponent,
     ProductsIntroComponent,
     CertificateComponent,
-    EquipmentComponent
+    EquipmentComponent,
+    ProductsCoatingComponent
   ],
   imports: [
     BrowserModule,
