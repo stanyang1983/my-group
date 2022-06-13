@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
 
   form!: FormGroup;
 
-  
+
 subject = [
     { for: '索取色卡'},
     { for: '技術服務'},
@@ -39,13 +39,18 @@ subject = [
     });
   }
 
+  mailText:string = "";
+
   submit(){
     console.log(this.form.value);
+    //this.mailText = "stanyang1983@gmail.com+?subject=files&body=" + this.form.value ; // add the links to body
+    //window.location.assign("mailto:stanyang1983@gmail.com+?subject=files&body=" + this.form.value );
     Swal.fire({
       title: '感謝您',
-      text: '稍後將會有專人聯繫您！',
+      text: '將會有專人聯繫您！',
       icon: 'success'
-    })
+    });
+
     this.reset()
   }
 

@@ -41,7 +41,32 @@
     border-radius: 8px;
     margin-bottom: 35px;
     position: relative;
+    &.step1{
+      background-color: #ffefc3;
+      border: 2px dashed #b98e03;
+      .box{background-color: #b98e03;}
+    }
+    &.step2{
+      background-color: #c3dbff;
+      border: 2px dashed #034cb9;
+      .box{background-color: #034cb9;}
+    }
+    &.step3{
+      background-color: #ffc5c3;
+      border: 2px dashed #b91803;
+      .box{background-color: #b91803;}
+    }
+    &.step4{
+      background-color: #dcf1b3;
+      border: 2px dashed #03b90c;
+      .box{background-color: #03b90c;}
+    }
+    &.step5{
+      background-color: #ffefc3;
+      border: 2px dashed #ff9100;
+      .box{background-color: #ff9100;}
 
+    }
     &::after{
       content: '';
       position: absolute;
@@ -69,8 +94,6 @@
       flex-wrap: wrap;
       justify-content: center;
       .box{
-        &.process1{background-color: #034cb9;}
-        &.process2{background-color: #008d13;}
         display: flex;
         justify-content: center;
         align-items: center;
@@ -146,6 +169,12 @@
         }
         &.boxImg9{
           background: url('../../../../assets/images/products/process/process005.jpg') center center; background-size: cover;
+        }
+        &.boxImg10{
+          background: url('../../../../assets/images/products/process/process0010.jpg') center center; background-size: cover;
+        }
+        &.boxImg11{
+          background: url('../../../../assets/images/products/process/process0011.jpg') center center; background-size: cover;
         }
       }
     }

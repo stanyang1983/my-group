@@ -59,7 +59,7 @@ import { ProductsCoatingComponent } from './pages/main/products-coating/products
     LayoutModule,
     LightgalleryModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}
