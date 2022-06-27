@@ -29,14 +29,14 @@ export class BigBannerComponent implements OnInit {
     //slideBy:4,
     responsive: {
       1800:{
-        items:2,
-        center: false,
+        items:1,
+        //center: false,
       },
       1500:{
-        items:1.5,
+        items:1
       },
       1200:{
-        items:1.5
+        items:1
       },
       600:{
         items:1
