@@ -79,7 +79,7 @@ subject = [
               icon: 'success',
               confirmButtonColor: '#3085d6',
               cancelButtonColor: '#d33',
-              confirmButtonText: 'Yes, delete it!'
+              confirmButtonText: '關閉'
             }).then(() => {
               window.location.reload();
             })
