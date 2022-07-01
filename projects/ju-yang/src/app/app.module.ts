@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +31,7 @@ import { LightgalleryModule } from 'lightgallery/angular';
 import { CertificateComponent } from './pages/main/certificate/certificate.component';
 import { EquipmentComponent } from './pages/main/equipment/equipment.component';
 import { ProductsCoatingComponent } from './pages/main/products-coating/products-coating.component';
+import { CaptchaComponent } from './share/captcha/captcha.component';
 
 
 @NgModule({
@@ -49,20 +52,22 @@ import { ProductsCoatingComponent } from './pages/main/products-coating/products
     ProductsIntroComponent,
     CertificateComponent,
     EquipmentComponent,
-    ProductsCoatingComponent
+    ProductsCoatingComponent,
+    CaptchaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutModule,
     LightgalleryModule,
     ReactiveFormsModule,
     FormsModule
   ],
   providers: [
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })

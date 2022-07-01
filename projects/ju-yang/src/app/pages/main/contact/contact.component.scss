@@ -19,7 +19,7 @@
               }
         };
         .formInput{
-            flex-grow: 1; 
+            flex-grow: 1;
             .alert{
                 color: #dc143c;
                 div{font-size: 13px;}
@@ -27,16 +27,25 @@
             &.butPlz{
                 text-align: center;
             }
+            &.formInputV{
+              display: flex;
+              align-items: center;
+              .verifyCode{
+               position: relative;
+               top: 7px;
+              }
+            }
+
         }
         input,textarea{
             width: calc(100% - 16px);
             flex-grow: 1;
-            padding: 8px    
+            padding: 8px
         };
        select{
             //width: 100%;
             flex-grow: 1;
-            padding: 8px    
+            padding: 8px
         };
 
     }
@@ -51,8 +60,8 @@
             cursor: no-drop;
         }
     }
-   
-    
+
+
 }
 
 .iframe{

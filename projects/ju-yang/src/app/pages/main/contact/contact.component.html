@@ -84,7 +84,13 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="formG">
+              <label for=""><span style="color:#dc143c ;">*</span>  驗證器</label>
+              <div class="formInput formInputV">
+                  <app-captcha #verifyCode class="verifyCode"></app-captcha>
+                  <input type="number" placeholder="輸入驗證碼" formControlName="captcha" style="width: 120px;flex-grow: 0;margin-left: 5px;">
+              </div>
             </div>
             <div  class="formG">
                 <label for=""></label>

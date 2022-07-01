@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
+import { MailService } from './mail.service';
+import { CaptchaComponent } from '../../../share/captcha/captcha.component';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +10,9 @@ import Swal from 'sweetalert2'
   styleUrls: ['./contact.component.scss', '../../stylesAll.scss']
 })
 export class ContactComponent implements OnInit {
+
+  @ViewChild('verifyCode')
+  verifyCode: CaptchaComponent = new CaptchaComponent; //获取页面中的验证码组件
 
   form!: FormGroup;
 
@@ -19,7 +24,7 @@ subject = [
     { for: '其他'}  ,
   ];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private mailService:MailService) { }
 
   ngOnInit(): void {
 
@@ -35,23 +40,67 @@ subject = [
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
       ])],
       subject:[this.subject[0].for],
-      content:['', Validators.required]
+      content:['', Validators.required],
+      captcha:['', Validators.required]
     });
   }
 
   mailText:string = "";
 
   submit(){
+
     console.log(this.form.value);
-    //this.mailText = "stanyang1983@gmail.com+?subject=files&body=" + this.form.value ; // add the links to body
-    //window.location.assign("mailto:stanyang1983@gmail.com+?subject=files&body=" + this.form.value );
-    Swal.fire({
-      title: '感謝您',
-      text: '將會有專人聯繫您！',
-      icon: 'success'
-    });
+    if(!this.verifyCode.validate(this.form.controls['captcha'].value)){
+      Swal.fire({
+        title: '驗證碼錯誤!',
+        icon: 'error'
+      });
+      this.form.controls['captcha'].reset();
+    }else{
+
+      this.mailService.sendMail(
+        this.form.controls['company'].value.replace(/\s+/g, ''),
+        this.form.controls['name'].value.replace(/\s+/g, ''),
+        this.form.controls['phone'].value.replace(/\s+/g, ''),
+        this.form.controls['email'].value.replace(/\s+/g, ''),
+        this.form.controls['subject'].value.replace(/\s+/g, ''),
+        this.form.controls['content'].value.replace(/\s+/g, ''),
+      ).subscribe({
+        next:(res)=>{
+
+        },
+        error:(error)=>{
+          console.log(error);
+          if(error.error.text == 'success'){
+
+            Swal.fire({
+              title: '感謝您',
+              text: "將會有專人聯繫您！",
+              icon: 'success',
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Yes, delete it!'
+            }).then(() => {
+              window.location.reload();
+            })
+
+            //this.reset()
+          }else{
+            Swal.fire({
+              title: 'error',
+              icon: 'error'
+            });
+          }
+        }
+      });
+
+
+    }
+
+
 
     this.reset()
+
   }
 
   reset(){
@@ -60,9 +109,10 @@ subject = [
       'name': '',
       'phone': '',
       'email': '',
-      'subject': this.subject[0].for,
+      'subject': '',
       'content': ''
      });
+     this.form.controls['captcha'].reset();
   }
 
 }
