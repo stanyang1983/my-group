@@ -47,10 +47,10 @@ export class MailService {
     formData.append('email', email);
     formData.append('subject', subject);
     formData.append('content', content);
-    formData.append('to', 'stanyang1983@gmail.com');
+    formData.append('to', 'juyang3q@gmail.com');
 
     console.log(formData);
 
-    return this.http.post<any>('https://leopard2020.com/sendMail/' ,formData);
+    return this.http.post<any>('http://juyangcoating.com.tw/api/' ,formData);
   }
 }

@@ -84,7 +84,7 @@ subject = [
               window.location.reload();
             })
 
-            //this.reset()
+            this.reset()
           }else{
             Swal.fire({
               title: 'error',
@@ -97,9 +97,6 @@ subject = [
 
     }
 
-
-
-    this.reset()
 
   }
 
