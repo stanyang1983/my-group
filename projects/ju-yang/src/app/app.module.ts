@@ -32,6 +32,7 @@ import { CertificateComponent } from './pages/main/certificate/certificate.compo
 import { EquipmentComponent } from './pages/main/equipment/equipment.component';
 import { ProductsCoatingComponent } from './pages/main/products-coating/products-coating.component';
 import { CaptchaComponent } from './share/captcha/captcha.component';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import { CaptchaComponent } from './share/captcha/captcha.component';
     CaptchaComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
@@ -64,7 +65,8 @@ import { CaptchaComponent } from './share/captcha/captcha.component';
     LayoutModule,
     LightgalleryModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TransferHttpCacheModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},

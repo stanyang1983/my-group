@@ -13,7 +13,6 @@ import { EquipmentComponent } from './pages/main/equipment/equipment.component';
 import { NotFoundComponent } from './pages/main/not-found/not-found.component';
 import { ProductsCoatingComponent } from './pages/main/products-coating/products-coating.component';
 const routes: Routes = [
-  // { path: "login", component: LoginComponent, canActivate : [IsloginedGuardService] },
 
   { path: "", component: MainComponent, children:[
     { path: "", redirectTo: 'index', pathMatch: 'full' },
@@ -34,7 +33,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ju-yang",
+            "outputPath": "dist/JuYang/browser",
             "index": "projects/ju-yang/src/index.html",
             "main": "projects/ju-yang/src/main.ts",
             "polyfills": "projects/ju-yang/src/polyfills.ts",
@@ -31,7 +31,9 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ju-yang/src/favicon.ico",
-              "projects/ju-yang/src/assets"
+              "projects/ju-yang/src/assets",
+              "projects/ju-yang/src/sitemap.xml"
+
             ],
             "styles": [
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
@@ -101,13 +103,73 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ju-yang/src/favicon.ico",
-              "projects/ju-yang/src/assets"
+              "projects/ju-yang/src/assets",
+              "projects/ju-yang/src/sitemap.xml"
             ],
             "styles": [
               "projects/ju-yang/src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/JuYang/server",
+            "main": "projects/ju-yang/server.ts",
+            "tsConfig": "projects/ju-yang/tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "projects/ju-yang/src/environments/environment.ts",
+                  "with": "projects/ju-yang/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "JuYang:build:development",
+              "serverTarget": "JuYang:server:development"
+            },
+            "production": {
+              "browserTarget": "JuYang:build:production",
+              "serverTarget": "JuYang:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "JuYang:build:production",
+              "serverTarget": "JuYang:server:production"
+            },
+            "development": {
+              "browserTarget": "JuYang:build:development",
+              "serverTarget": "JuYang:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
