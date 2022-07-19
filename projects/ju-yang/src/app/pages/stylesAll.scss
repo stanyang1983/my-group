@@ -117,7 +117,7 @@ p{
 
 .proBg{
   padding: 90px 0;
-  background: url('../../assets/images/indexProBg.jpg') center center no-repeat ;
+  background: url('../../assets/images/indexProBg.webp') center center no-repeat ;
   background-size: cover;
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -133,42 +133,42 @@ p{
     height: 150px;
   }
   &.banner1{
-    background: url('../../assets/images/banner-About.jpg') top center no-repeat ;
+    background: url('../../assets/images/banner-About.webp') top center no-repeat ;
     background-size: cover;
     @media screen and (min-width: 1500px) {
-      background: url('../../assets/images/banner-About.jpg') center center no-repeat ;
+      background: url('../../assets/images/banner-About.webp') center center no-repeat ;
       background-size: cover;
     }
   }
   &.banner2{
-    background: url('../../assets/images/banner-Products.jpg') top center no-repeat ;
+    background: url('../../assets/images/banner-Products.webp') top center no-repeat ;
     background-size: cover;
     @media screen and (min-width: 1500px) {
-      background: url('../../assets/images/banner-Products.jpg') center center no-repeat ;
+      background: url('../../assets/images/banner-Products.webp') center center no-repeat ;
       background-size: cover;
     }
   }
   &.banner3{
-    background: url('../../assets/images/banner-quality.jpg') center center no-repeat ;
+    background: url('../../assets/images/banner-quality.webp') center center no-repeat ;
     background-size: cover;
     @media screen and (min-width: 1500px) {
-      background: url('../../assets/images/banner-quality.jpg') bottom center no-repeat ;
+      background: url('../../assets/images/banner-quality.webp') bottom center no-repeat ;
       background-size: cover;
     }
   }
   &.banner4{
-    background: url('../../assets/images/banner-Cooperation.jpg') top center no-repeat ;
+    background: url('../../assets/images/banner-Cooperation.webp') top center no-repeat ;
     background-size: cover;
     @media screen and (min-width: 1500px) {
-      background: url('../../assets/images/banner-Cooperation.jpg') center center no-repeat ;
+      background: url('../../assets/images/banner-Cooperation.webp') center center no-repeat ;
       background-size: cover;
     }
   }
   &.banner5{
-    background: url('../../assets/images/banner-Contact.jpg') center center no-repeat ;
+    background: url('../../assets/images/banner-Contact.webp') center center no-repeat ;
     background-size: cover;
     @media screen and (min-width: 1500px) {
-      background: url('../../assets/images/banner-Contact.jpg') bottom center no-repeat ;
+      background: url('../../assets/images/banner-Contact.webp') bottom center no-repeat ;
       background-size: cover;
     }
   }

@@ -156,7 +156,17 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/",
+              "/index",
+              "/products/about",
+              "/products/coating",
+              "/products/process",
+              "/products/intro",
+              "/cooperation",
+              "/quality/certificate",
+              "/quality/equipment",
+              "/contact",
+              "about"
             ]
           },
           "configurations": {
